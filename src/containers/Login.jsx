@@ -35,15 +35,15 @@ const Login = props => {
             <form className="login__container--form" onSubmit={handleSubmit} >
                 
                 <input 
-                    name="password"
+                    name="email"
                     className="input" 
                     type="text" 
                     placeholder="Correo"
                     onChange={handleInput}
-
-                />
+                    
+                    />
                 <input 
-                    name="email"
+                    name="password"
                     className="input" 
                     type="password" 
                     placeholder="Contraseña"
@@ -73,7 +73,7 @@ const Login = props => {
     </section>
 
 );
-};
+}
 
 const mapDispatchToProps = {
     loginRequest,
