@@ -14,8 +14,10 @@ const Home = ({ myList, trends, originals }) => {
     // const initialState = useInitialState(API);
     return  (
       <>
-        
+        {/* <Header/> */}
+        {/* <Search isHome/> */}
         <Search />
+
         {myList.length > 0 &&
           <Categories title="Mi Lista">
             <Carousel>

@@ -155,3 +155,19 @@ hay que instalar:
 `npm install md5 --save`
 
 gravatar te va crear un hash con tu correo que lo asocia a la foto del imagen del avatar
+
+## Debug con Redux Devtools
+Redux Dev Tools nos va a servir mucho para entender mejor el flujo de nuestra información en nuestra aplicación y poder realizar debugging de manera sencilla.
+Solamente necesitas instalar la extensión según el navegador que tengas:
+-Chrome  https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
+-Firefox https://addons.mozilla.org/es/firefox/addon/reduxdevtools/
+Una vez instalado dentro de nuestro index.js vamos a añadir el siguiente código:
+```js
+// importamos compose  
+import { createStore, compose } from ‘redux’;  
+...   
+  
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose  
+  
+const store = createStore(reducer, initialState, composeEnhancers())  
+```
